@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+body {
+  background-color: darkslategray;
+}
+
 img {
   max-width: 100%;
   max-height: 100%;
@@ -10,23 +14,19 @@ img {
 
 .SiteHeader {
   margin: 0;
-  background-color: lightgrey;
+  background-color: black;
   margin: 0px;
-}
-
-.SiteHeader-title {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  margin-left: 1rem;
 }
 
 .SiteHeader-title h1 {
   margin-top: 0;
   margin-bottom: 10px;
+  color: white;
 }
 
 .SiteHeader-title h2 {
   margin: 0;
+  padding: 0;
 }
 
 .GeneralContainer {
@@ -60,17 +60,20 @@ img {
 }
 
 .GeneralContainer-MiddlePanel {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: black;
 }
 
 .GeneralContainer-MiddlePanel img {
   height: 75vh;
+  max-width: 100%;
 }
 
 .GeneralContainer-RightPanel {
@@ -93,10 +96,16 @@ img {
 }
 
 .SiteFooter {
+  text-align: center;
   height: 3rem;
   width: 100vw;
   position: fixed;
   bottom: 0;
   background-color: lightgrey;
+}
+
+.SiteFooter button {
+  height: 50px;
+  width: 50px;
 }
 /*# sourceMappingURL=style.css.map */

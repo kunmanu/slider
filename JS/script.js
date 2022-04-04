@@ -51,3 +51,14 @@ function slideBackward() {
         }
     }
 }
+
+
+document.onkeydown = function (e) {
+    switch (e.key) {
+        case 'ArrowLeft':
+            slideBackward()
+            break;
+        case 'ArrowRight':
+            slideForward()
+    }
+};
