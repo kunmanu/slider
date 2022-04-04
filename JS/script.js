@@ -52,7 +52,7 @@ function slideBackward() {
     }
 }
 
-
+//completement pompé sur https://stackoverflow.com/questions/5597060/detecting-arrow-key-presses-in-javascript
 document.onkeydown = function (e) {
     switch (e.key) {
         case 'ArrowLeft':
