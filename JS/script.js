@@ -1,13 +1,13 @@
 
-let imgArr =["img/img_1.gif","img/img_2.jpeg","img/img_3.jpeg","img/img_4.jpg","img/img_5.jpg","img/img_6.jpg","img/img_7.jpg","img/img_8.jpg",];
+let imgArr =["img/img_1.jpg","img/img_2.jpg","img/img_3.jpg","img/img_4.jpg","img/img_5.jpg","img/img_6.jpg","img/img_7.jpg","img/img_8.jpg",];
 
 const img = document.querySelector(".img")
 img.src = imgArr[0] 
 let i=0
 let chrono = null
 
-const leftBtn = document.querySelector(".LeftPanel-ArrowNav-btn");
-const rightBtn = document.querySelector(".RightPanel-ArrowNav-btn");
+const leftBtn = document.querySelector(".LeftPanel-btn");
+const rightBtn = document.querySelector(".RightPanel-btn");
 const playBtn = document.querySelector(".Play-btn")
 const pauseBtn = document.querySelector(".Pause-btn")
 
@@ -24,8 +24,13 @@ function play() {
 }
 
 function pause() {
-    clearInterval(chrono)
+
+        clearInterval(chrono)
+    
+ 
 }
+
+
 
 
 function slideForward() {
@@ -51,6 +56,16 @@ function slideBackward() {
         }
     }
 }
+// function playing() {
+//     if (playBtn.classList.contains("playing")===false){
+//         playBtn.classList.add("playing")
+//         chrono=setInterval(slideForward, 2000);
+//     }
+//     if(playBtn.classList.contains("playing")){
+//         playBtn.classList.remove("playing")
+//         clearInterval(chrono)
+//     }
+// }
 
 //completement pompé sur https://stackoverflow.com/questions/5597060/detecting-arrow-key-presses-in-javascript
 document.onkeydown = function (e) {
@@ -60,5 +75,8 @@ document.onkeydown = function (e) {
             break;
         case 'ArrowRight':
             slideForward()
-    }
+            break;
+        }
 };
+
+
