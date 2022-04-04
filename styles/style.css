@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.SiteHeader {
+  margin: 0;
+  background-color: lightgrey;
+  margin: 0px;
+}
+
+.SiteHeader-title {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+.SiteHeader-title h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.SiteHeader-title h2 {
+  margin: 0;
+}
+
+.GeneralContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10% 80% 10%;
+      grid-template-columns: 10% 80% 10%;
+  height: 75vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.GeneralContainer-LeftPanel {
+  height: inherit;
+}
+
+.GeneralContainer-LeftPanel-ArrowNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: inherit;
+}
+
+.GeneralContainer-LeftPanel-ArrowNav button {
+  height: 100%;
+  width: 100%;
+}
+
+.GeneralContainer-MiddlePanel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: black;
+}
+
+.GeneralContainer-MiddlePanel img {
+  height: 75vh;
+}
+
+.GeneralContainer-RightPanel {
+  height: inherit;
+}
+
+.GeneralContainer-RightPanel-ArrowNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: inherit;
+}
+
+.GeneralContainer-RightPanel-ArrowNav button {
+  height: 100%;
+  width: 100%;
+}
+
+.SiteFooter {
+  height: 3rem;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  background-color: lightgrey;
+}
+/*# sourceMappingURL=style.css.map */
