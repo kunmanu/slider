@@ -13,23 +13,13 @@ let i=0
 let chrono = null
 img.src = imgArr[0] 
 
-
 //les boutons
 leftBtn.addEventListener("click",slideBackward)
 rightBtn.addEventListener("click",slideForward)
 playBtn.addEventListener("click", playing)
 
 
-//slideForward() toutes le deux seconde
-function play() {
-    chrono=setInterval(slideForward, 2000);
-}
-//stop slideForward() toutes le deux seconde
-function pause() {
-        clearInterval(chrono)
-}
-
-//fonction qui avance d'une image// la classe current permet de 
+//fonction qui avance d'une image// 
 function slideForward() {
     if (i>-1) {
         i++;
@@ -41,7 +31,7 @@ function slideForward() {
         }
     }
     
-    document.querySelector('.Current').classList.remove('Current')//change les puces grace a la classe current
+    document.querySelector('.Current').classList.remove('Current')//modifie les puces grace a la classe current
     
     counterTxt.innerHTML = ((i+1)+'/'+(imgArr.length)) 
     allDot[i].classList.add("Current")
@@ -59,12 +49,12 @@ function slideBackward() {
             img.src = imgArr[i]
         }
     }
-    document.querySelector('.Current').classList.remove('Current')//change les puces grace a la classe current
+    document.querySelector('.Current').classList.remove('Current')//modifie les puces grace a la classe current
     counterTxt.innerHTML = ((i+1)+'/'+(imgArr.length)) 
     allDot[i].classList.add("Current")
 }
 
-// fonction conectée au bouton play, vérifie si le bouton possède la classe playing, si non : l'attribu et repète slideforward() toutes les deux secondes, si oui, enlève la classe playing et annule la repetition de slideforward()
+// reagie a .PlayBtn, vérifie si le bouton possède la classe playing, si non : l'attribu et repète slideforward() toutes les deux secondes, si oui, enlève la classe playing et annule la repetition de slideforward()
 function playing() {
     if (playBtn.classList.contains("playing")===false){
         playBtn.classList.add("playing")
@@ -78,7 +68,7 @@ function playing() {
     }
 }
 
-//déplacement grace aux puces
+//déplacement grace aux puces (pb:ne reppart pas du bon index  quand on reprend le control au clavier ou avec les bouton changer all.Dot.lenth pour imgArr.length pr un compteur génal/dégager les puces pour mettre une bare de chargement ds le bouton play)
 for (let y = 0; y < allDot.length; y++) {
     currentDot = allDot[y];
     currentDot.addEventListener("click", function () {
