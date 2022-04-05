@@ -5,17 +5,16 @@ const img = document.querySelector(".img")
 img.src = imgArr[0] 
 let i=0
 let chrono = null
-
 const leftBtn = document.querySelector(".LeftPanel-btn");
 const rightBtn = document.querySelector(".RightPanel-btn");
 const playBtn = document.querySelector(".Play-btn")
+let counterTxt= document.querySelector('.counter-txt')
+let allDot = document.querySelectorAll(".SiteHeader-list-dot")
 
 
 leftBtn.addEventListener("click",slideBackward)
 rightBtn.addEventListener("click",slideForward)
 playBtn.addEventListener("click", playing)
-
-
 
 function play() {
     chrono=setInterval(slideForward, 2000);
@@ -25,18 +24,6 @@ function pause() {
         clearInterval(chrono)
 
 }
-
-//completement pompé sur https://stackoverflow.com/questions/5597060/detecting-arrow-key-presses-in-javascript
-document.onkeydown = function (e) {
-    switch (e.key) {
-        case 'ArrowLeft':
-            slideBackward()
-            break;
-        case 'ArrowRight':
-            slideForward()
-            break;
-        }
-};
 
 function slideForward() {
     if (i>-1) {
@@ -48,7 +35,15 @@ function slideForward() {
             img.src = imgArr[i]
         }
     }
+    
+    document.querySelector('.Current').classList.remove('Current')
+    
+    counterTxt.innerHTML = ((i+1)+'/'+(imgArr.length)) 
+    allDot[i].classList.add("Current")
+    console.log(allDot[i]);
+
 }
+
 
 function slideBackward() {
     if (i>-1) {
@@ -60,32 +55,55 @@ function slideBackward() {
             img.src = imgArr[i]
         }
     }
+    document.querySelector('.Current').classList.remove('Current')
+    counterTxt.innerHTML = ((i+1)+'/'+(imgArr.length)) 
+    allDot[i].classList.add("Current")
 }
+
+// fonction du bouton play
 function playing() {
     if (playBtn.classList.contains("playing")===false){
         playBtn.classList.add("playing")
-        // playBtn.classList.remove("fa-play")
-        // playBtn.classList.add("fa-pause")
         chrono=setInterval(slideForward, 2000);
         playBtn.innerHTML = '<i class="fa-solid fa-pause"></i>'
     }
     else{
         playBtn.classList.remove("playing")
-        // playBtn.classList.add("fa-play")
-        // playBtn.classList.remove("fa-pause")
         playBtn.innerHTML = '<i class="fa-solid fa-play"></i>'
-
         clearInterval(chrono)
     }
 }
 
+//déplacement grace au puces
+for (let y = 0; y < allDot.length; y++) {
+    currentDot = allDot[y];
+    currentDot.addEventListener("click", function () {
+        img.src=imgArr[y]
+        document.querySelector('.Current').classList.remove('Current')
+        allDot[y].classList.add("Current")
+        counterTxt.innerHTML = ((y+1)+'/'+(imgArr.length)) 
+
+    })
+}
+
+//Control au clavier https://stackoverflow.com/questions/5597060/detecting-arrow-key-presses-in-javascript
+document.onkeydown = function (e) {
+    switch (e.key) {
+        case 'ArrowLeft':
+            slideBackward()
+            break;
+        case 'ArrowRight':
+            slideForward()
+            break;
+        }
+};
 
 
 
 
 
 
-//completement pompé sur https://stackoverflow.com/questions/5597060/detecting-arrow-key-presses-in-javascript
+
 
 
 

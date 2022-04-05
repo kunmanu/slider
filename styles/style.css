@@ -18,23 +18,41 @@ img {
 }
 
 .SiteHeader {
-  background-color: black;
-  display: none;
+  background-color: transparent;
+  position: fixed;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.SiteHeader-title h1 {
+.SiteHeader-list {
   margin-top: 0;
   margin-bottom: 10px;
-  color: white;
+  z-index: 1;
 }
 
-.SiteHeader-title h2 {
-  margin: 0;
-  padding: 0;
+.SiteHeader-list-dot {
+  color: #868686;
+}
+
+.SiteHeader-list-dot:hover {
+  color: lightgray;
+}
+
+.Current {
+  color: white;
+  font-size: 20px;
 }
 
 .GeneralContainer {
+  z-index: 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -54,7 +72,7 @@ img {
 }
 
 .GeneralContainer-Panels button {
-  background: transparent;
+  background-color: transparent;
   border: none;
   height: 100%;
   width: 8rem;
@@ -79,7 +97,6 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  z-index: 0;
 }
 
 .GeneralContainer-MiddlePanel img {
@@ -98,12 +115,21 @@ img {
   background-color: transparent;
 }
 
+.SiteFooter p {
+  color: gray;
+  position: absolute;
+  right: 20px;
+  -webkit-transform: translate(0px, -11px);
+          transform: translate(0px, -11px);
+}
+
 .SiteFooter button {
   border: none;
   color: #b3b3b3;
+  display: contents;
   font-size: 25px;
   height: 65px;
-  width: 750px;
+  width: 50vw;
   background-color: transparent;
   -webkit-transform: translate(0px, -27px);
           transform: translate(0px, -27px);
