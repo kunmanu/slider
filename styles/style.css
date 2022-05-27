@@ -21,56 +21,39 @@ img {
   background-color: transparent;
   position: fixed;
   margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
-
 .SiteHeader-list {
   margin-top: 0;
   margin-bottom: 10px;
   z-index: 1;
 }
-
 .SiteHeader-list-dot {
-  color: #868686;
+  color: rgb(134, 134, 134);
 }
-
 .SiteHeader-list-dot:hover {
-  color: lightgray;
+  color: rgb(211, 211, 211);
 }
 
 .Current {
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 20px;
 }
 
 .GeneralContainer {
   z-index: 0;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  align-items: center;
   display: flex;
   height: 100vh;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   width: auto;
   background-color: black;
 }
-
 .GeneralContainer-Panels {
   height: 100%;
 }
-
 .GeneralContainer-Panels button {
   background-color: transparent;
   border: none;
@@ -78,27 +61,18 @@ img {
   width: 8rem;
   z-index: 1;
 }
-
 .GeneralContainer-Panels button i {
-  color: #2e2e2e;
+  color: rgb(46, 46, 46);
   font-size: 50px;
 }
-
 .GeneralContainer-Panels button:hover i {
-  color: #818181;
+  color: rgb(129, 129, 129);
 }
-
 .GeneralContainer-MiddlePanel {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -ms-grid;
+  align-items: center;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 .GeneralContainer-MiddlePanel img {
   height: 100%;
   max-height: 99vh;
@@ -114,32 +88,27 @@ img {
   bottom: 0;
   background-color: transparent;
 }
-
 .SiteFooter p {
   color: gray;
   position: absolute;
   right: 20px;
-  -webkit-transform: translate(0px, -11px);
-          transform: translate(0px, -11px);
+  transform: translate(0px, -11px);
 }
-
 .SiteFooter button {
   border: none;
-  color: #b3b3b3;
+  color: rgb(179, 179, 179);
   display: contents;
   font-size: 25px;
   height: 65px;
   width: 50vw;
   background-color: transparent;
-  -webkit-transform: translate(0px, -27px);
-          transform: translate(0px, -27px);
+  transform: translate(0px, -27px);
 }
-
 .SiteFooter button i {
   text-shadow: 1px 1px 2px black;
 }
-
 .SiteFooter button:hover i {
-  color: #f3f3f3;
+  color: rgb(243, 243, 243);
 }
+
 /*# sourceMappingURL=style.css.map */
